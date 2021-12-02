@@ -20,6 +20,12 @@ try:
     # imprime la version de la base de datos
     print(connection.version)
     print("select count(*) from PLN_HPC.PNL_TEXTO_ATENDIMENTO")
+    
+    cur = connection.cursor()
+    cur.execute("select count(*) from PLN_HPC.PNL_TEXTO_ATENDIMENTO")
+    res = cur.fetchall()
+    for row in res:
+        print(row)
 
 except cx_Oracle.Error as error:
     print(error)
