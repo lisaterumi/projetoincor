@@ -19,7 +19,7 @@ try:
 
     # imprime la version de la base de datos
     print(connection.version)
-	  print("select count(*) from PLN_HPC.PNL_TEXTO_ATENDIMENTO")
+    print("select count(*) from PLN_HPC.PNL_TEXTO_ATENDIMENTO")
 
 except cx_Oracle.Error as error:
     print(error)
@@ -27,4 +27,4 @@ except cx_Oracle.Error as error:
 finally:
     # release the connection
     if connection:
-    connection.close()
+        connection.close()
