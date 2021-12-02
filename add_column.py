@@ -19,12 +19,9 @@ try:
 
     # imprime la version de la base de datos
     print(connection.version)
-    print("select count(*) from PLN_HPC.PNL_TEXTO_ATENDIMENTO")
+    print("Incluindo nova coluna na tabela")
     
-    cur = connection.cursor()
-    cur.execute("select count(*) from PLN_HPC.PNL_TEXTO_ATENDIMENTO")
-    res = cur.fetchall()
-    
+    cur = connection.cursor()    
     query="ALTER TABLE "+str(table)+" ADD textoProcessado TEXT;"
     print query;
     cur.execute(query);
